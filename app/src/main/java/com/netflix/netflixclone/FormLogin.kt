@@ -10,6 +10,9 @@ class FormLogin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form_login)
 
+
+
+
         var textCadastrar = text_signup
 
         textCadastrar.setOnClickListener {
