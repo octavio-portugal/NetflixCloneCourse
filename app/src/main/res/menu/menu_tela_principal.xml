@@ -4,7 +4,7 @@
 
     <item
         android:title=""
-        android:orderIncategory="100"
+        android:orderInCategory="100"
         app:showAsAction="ifRoom"
         android:icon="@drawable/logo"/>
 

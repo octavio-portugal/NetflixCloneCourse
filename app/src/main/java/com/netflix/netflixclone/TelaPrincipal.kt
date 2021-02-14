@@ -29,7 +29,6 @@ class TelaPrincipal : AppCompatActivity() {
                 true
             }
             else -> super.onOptionsItemSelected(item)
-
         }
     }
 
