@@ -14,7 +14,7 @@ class FormLogin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form_login)
 
-
+        VerificarUsuarioLogado()
 
 
         var textCadastrar = text_signup
@@ -29,25 +29,27 @@ class FormLogin : AppCompatActivity() {
         }
     }
 
-    private fun LoginUsuario(){
+    private fun LoginUsuario() {
 
         var email = edit_email.text.toString()
         var senha = edit_password.text.toString()
         var mensagens = errorMessage
 
-        if (email.isEmpty() || senha.isEmpty()){
+        if (email.isEmpty() || senha.isEmpty()) {
             mensagens.setText("Coloque o seu e-mail e sua senha")
-        }else{
-            FirebaseAuth.getInstance().signInWithEmailAndPassword(email, senha).addOnCompleteListener {
+        } else {
+            FirebaseAuth.getInstance().signInWithEmailAndPassword(email, senha)
+                .addOnCompleteListener {
 
-                if (it.isSuccessful){
-                    Toast.makeText(this, "Login Efetuado com Sucesso!", Toast.LENGTH_SHORT).show()
-                    AbrirTelaPrincipal()
-                }
-            }.addOnFailureListener {
+                    if (it.isSuccessful) {
+                        Toast.makeText(this, "Login Efetuado com Sucesso!", Toast.LENGTH_SHORT)
+                            .show()
+                        AbrirTelaPrincipal()
+                    }
+                }.addOnFailureListener {
                 var erro = it
 
-                when{
+                when {
                     erro is FirebaseAuthInvalidCredentialsException -> mensagens.setText("E-mail ou Senha incorretos!")
                     erro is FirebaseNetworkException -> mensagens.setText("Sem conexão com a internet!")
                     else -> mensagens.setText("Erro ao logar usuário!")
@@ -58,13 +60,23 @@ class FormLogin : AppCompatActivity() {
 
     }
 
-    private fun AbrirTelaPrincipal(){
+    private fun VerificarUsuarioLogado() {
+        val usurioAtual = FirebaseAuth.getInstance().currentUser
+
+        if (usurioAtual != null) {
+            AbrirTelaPrincipal()
+        }
+
+    }
+
+
+    private fun AbrirTelaPrincipal() {
         var intent = Intent(this, TelaPrincipal::class.java)
         startActivity(intent)
         finish()
     }
 
-    private fun OpenSingnupScreen(){
+    private fun OpenSingnupScreen() {
         var intent = Intent(this, FormCadastro::class.java)
         startActivity(intent)
 
