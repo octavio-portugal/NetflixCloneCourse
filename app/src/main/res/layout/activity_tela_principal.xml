@@ -30,7 +30,6 @@
         android:id="@+id/serie1"
         android:layout_width="200dp"
         android:layout_height="300dp"
-        android:src="@drawable/witcher"
         android:layout_marginStart="20dp"
         android:layout_marginTop="100dp"
        />
@@ -42,7 +41,7 @@
         android:layout_toEndOf="@id/serie1"
         android:layout_marginTop="100dp"
         android:layout_marginStart="10dp"
-        android:src="@drawable/witcher"/>
+       />
 
     <ImageView
         android:id="@+id/serie3"
@@ -51,7 +50,7 @@
         android:layout_toEndOf="@id/serie2"
         android:layout_marginTop="100dp"
         android:layout_marginStart="10dp"
-        android:src="@drawable/witcher"/>
+        />
     <ImageView
         android:id="@+id/serie4"
         android:layout_width="200dp"
@@ -59,7 +58,7 @@
         android:layout_toEndOf="@id/serie3"
         android:layout_marginTop="100dp"
         android:layout_marginStart="10dp"
-        android:src="@drawable/witcher"/>
+        />
 
 </RelativeLayout>
 </HorizontalScrollView>
