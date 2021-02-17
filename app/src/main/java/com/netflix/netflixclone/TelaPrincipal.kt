@@ -15,12 +15,22 @@ class TelaPrincipal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_principal)
 
+        var serie = serie1
+
         var imagens = Uri.parse("https://firebasestorage.googleapis.com/v0/b/netflix-clone-6488a.appspot.com/o/imagens%2Fwitcher.png?alt=media&token=52e7a2ca-1f62-4649-850e-c8f79796e682")
 
         Picasso.get().load(imagens).fit().placeholder(R.drawable.gif).into(serie1)
         Picasso.get().load(imagens).fit().placeholder(R.drawable.gif).into(serie2)
         Picasso.get().load(imagens).fit().placeholder(R.drawable.gif).into(serie3)
         Picasso.get().load(imagens).fit().placeholder(R.drawable.gif).into(serie4)
+
+
+        // Evento de clique
+        serie.setOnClickListener {
+            var intent =Intent(this, TelaSerie::class.java)
+            startActivity(intent)
+            finish()
+        }
 
     }
 
