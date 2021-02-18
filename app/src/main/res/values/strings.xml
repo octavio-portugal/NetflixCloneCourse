@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Netflix Clone</string>
+
+    <string name="descrição">
+        O mutante Gerald de Rívia é um caçador de
+        monstros que luta para encontrar seu lugar
+        num mundo onde as pessoas muitas vezes
+        são mais perversas que as criasturas selvagens
+    </string>
+
+    <string name="elenco">
+        Estrelando: Henry Cavill, Anya Chalotra, Freya Allan
+        Criação: Lauren Schmidt Hissrich
+    </string>
 </resources>
