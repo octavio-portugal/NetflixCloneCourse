@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,6 +17,7 @@
         android:id="@+id/image_video"/>
 
     <ImageView
+        android:id="@+id/play_video"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/play"
@@ -44,6 +49,7 @@
         android:text="90% Relevante"
         android:layout_below="@id/title"
         android:layout_marginStart="20dp"
+        android:textSize="16sp"
         android:layout_marginTop="20dp"/>
 
     <TextView
@@ -55,6 +61,7 @@
         android:fontFamily="sans-serif-black"
         android:layout_below="@id/title"
         android:layout_toEndOf="@id/relevance"
+        android:textSize="16sp"
         android:layout_marginTop="20dp"/>
 
     <TextView
@@ -65,6 +72,7 @@
         android:text="1 Temporada"
         android:fontFamily="sans-serif-black"
         android:layout_below="@id/title"
+        android:textSize="16sp"
         android:layout_toEndOf="@id/year"
         android:layout_marginTop="20dp"/>
     <TextView
@@ -77,24 +85,133 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:textSize="18sp"/>
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/starring"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Estrelando:"
+        android:textColor="@color/ligth_gray"
+        android:layout_below="@id/resume"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"/>
+
 
     <TextView
+        android:id="@+id/actors"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/ligth_gray"
         android:text="@string/elenco"
         android:layout_below="@id/resume"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="2dp"
         android:layout_marginEnd="20sp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/starring"
+        android:textSize="14sp"
+        android:gravity="bottom"/>
+
+    <ImageView
+        android:id="@+id/add1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actors"
+        android:src="@drawable/ic_add"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/add2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actors"
+        android:src="@drawable/ic_add"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:textSize="18sp"/>
+        android:layout_toEndOf="@id/add1"/>
 
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actors"
+        android:src="@drawable/ic_share"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/add2"/>
 
+    <TextView
+        android:id="@+id/myList"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ligth_gray"
+        android:text="Minha lista"
+        android:layout_below="@id/add1"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:id="@+id/ranking"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ligth_gray"
+        android:text="Classifique"
+        android:layout_below="@id/add2"
+        android:layout_toEndOf="@id/myList"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/text_share"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ligth_gray"
+        android:text="Compartilhe"
+        android:layout_below="@id/add2"
+        android:layout_toEndOf="@id/ranking"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"/>
 
+<TextView
+    android:id="@+id/episodes"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:textColor="@color/white"
+    android:fontFamily="sans-serif-black"
+    android:text="EPISODES"
+    android:layout_below="@id/myList"
+    android:layout_marginTop="30dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginBottom="30dp"
+    />
 
+    <TextView
+        android:id="@+id/trailer"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:text="TRAILER AND MORE"
+        android:layout_below="@id/ranking"
+        android:layout_toEndOf="@id/episodes"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        />
 
-
-
+    <TextView
+        android:id="@+id/morelike"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:text="MORE LIKE THIS"
+        android:layout_below="@id/text_share"
+        android:layout_toEndOf="@id/trailer"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        />
 
 </RelativeLayout>
+</ScrollView>

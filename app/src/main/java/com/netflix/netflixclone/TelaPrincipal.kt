@@ -29,7 +29,6 @@ class TelaPrincipal : AppCompatActivity() {
         serie.setOnClickListener {
             var intent =Intent(this, TelaSerie::class.java)
             startActivity(intent)
-            finish()
         }
 
     }
