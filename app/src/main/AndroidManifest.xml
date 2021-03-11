@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TrailerVideo"></activity>
+        <activity android:name=".ListadeFilmes"></activity>
+        <activity android:name=".TrailerVideo" />
         <activity android:name=".TelaSerie" />
         <activity android:name=".TelaPrincipal" />
         <activity android:name=".FormCadastro" />
